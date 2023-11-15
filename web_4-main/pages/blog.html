@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Merch Blog</title>
+    <link rel="stylesheet" href="css/blog.css">
+    
+</head>
+
+<body>
+
+    <header>
+        <h1>University Blog</h1>
+    </header>
+
+    <div class="container">
+        <div class="hex-grid">
+            <div class="light"></div>
+            <div class="grid"></div>
+        </div>
+    <div class="text">
+    <h1 class="uni">AITU Blog</h1>
+    <p class="uni">We are more than just a merchandise shop!</p>
+
+    <section class="videoForm">
+        <h2 class="uni">University Life, Traditions, and Events</h2>
+            <h3 class="uni">Explore Student Life</h3>
+            <div class="video-container">
+     <video id="video" src="comm.mp4" autoplay="" loop="" muted="">               
+            </div>
+    </section>
+
+    <section>
+        <h2 class="uni">Student Reviews and Testimonials</h2>
+        <article>
+            <p class="uni">Collect reviews and testimonials from students about their favorite university merchandise. Showcase how
+                these items are a part of their daily lives.</p>
+            <!-- Add student reviews and testimonials here -->
+            <div class="testimonial">
+                <p class="uni">"I absolutely love the university hoodie! It's so comfortable and keeps me warm during the colder
+                    months. I wear it to class almost every day!" - Zhanna, Computer Science Major</p>
+            </div>
+        </article>
+    </section>
+    <div class="regFormBtn">
+        <button id="openModalBtnReg">JOIN AITU BLOG</button>
+    </div>
+    
+
+<!-- Modal container -->
+<div id="registrationModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="container-create-acc">
+            <form id="ModalForm1">
+                <h3>CREATE AN ACCOUNT FOR AITU BLOG</h3>
+                <input type="text" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+    
+                <div class="btn-box">
+                    <button type="button" id="Next1">Next</button>
+                </div>
+            </form>
+            <form id="ModalForm2">
+                <h3>SOCIAL LINKS</h3>
+                <input type="text" placeholder="Medium" required>
+                <input type="text" placeholder="Github" required>
+                <input type="text" placeholder="Linkedin" required>
+    
+                <div class="btn-box">
+                    <button type="button" id="Back1">back</button>
+                    <button type="button" id="Next2">Next</button>
+                </div>
+            </form>
+            <form id="ModalForm3">
+                <h3>PERSONAL INFO</h3>
+                <input type="text" placeholder="First name" required>
+                <input type="text" placeholder="Last name" required>
+                <input type="text" placeholder="Mobile No." required>
+    
+                <div class="btn-box">
+                    <button type="button" id="Back2">back</button>
+                    <button type="Submit">Submit</button>
+                </div>
+            </form>
+            <div class="step-row">
+                <div id="progress"></div>
+                <div class="step-col"><small>Step 1</small></div>
+                <div class="step-col"><small>Step 2</small></div>
+                <div class="step-col"><small>Step 3</small></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var ModalForm1 = document.getElementById("ModalForm1");
+    var ModalForm2 = document.getElementById("ModalForm2");
+    var ModalForm3 = document.getElementById("ModalForm3");
+
+    var Next1 = document.getElementById("Next1");
+    var Next2 = document.getElementById("Next2");
+
+    var Back1 = document.getElementById("Back1");
+    var Back2 = document.getElementById("Back2");
+
+    var progress = document.getElementById("progress");
+
+    Next1.onclick = function() {
+        ModalForm1.style.left = "-450px";
+        ModalForm2.style.left = "40px";
+        progress.style.width = "240px";
+    }
+
+    Back1.onclick = function() {
+        ModalForm1.style.left = "40px";
+        ModalForm2.style.left = "450px";
+        progress.style.width = "120px";
+    }
+
+    Next2.onclick = function() {
+        ModalForm2.style.left = "-450px";
+        ModalForm3.style.left = "40px";
+        progress.style.width = "360px";
+    }
+
+    Back2.onclick = function() {
+        ModalForm2.style.left = "40px";
+        ModalForm3.style.left = "450px";
+        progress.style.width = "240px";
+    }
+
+    // Function to open the modal
+    document.getElementById('openModalBtnReg').onclick = function() {
+        document.getElementById('registrationModal').style.display = 'block';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById('registrationModal').style.display = 'none';
+    }
+</script>
+
+
+
+            <section id="quiz1" class="quiz">
+                <button id="openModalBtn">Quiz</button>
+              
+                <!-- Modal window -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content2">
+                        <span class="close">&times;</span>
+            <div class="quiz-container">
+                <!-- Include the quiz content and questions -->
+                <h3>Challenge your knowledge</h3>
+                <ol>
+                    <li class="quiz-qu"><p style="font-weight: bold;">What is the primary mission of Astana IT University?</p>
+                        <label>
+                            <input type="radio" name="q1" value="A"> Art and Culture Promotion
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="B"> Training Highly Qualified Personnel for the ICT Sector
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="C"> Environmental Conservation
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="D"> Sports Development
+                        </label>
+                    </li>
+
+                    <li class="quiz-qu"><p style="font-weight: bold;">What role does the Student Government play at Astana IT University?</p>
+                        <label>
+                            <input type="radio" name="q2" value="A"> Spectator Organization
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="B"> Decorative Committee
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="C"> Active Student Management
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="D"> Event Planning Board
+                        </label>
+                    </li>
+
+                    <li class="quiz-qu"><p style="font-weight: bold;">How many interest clubs operate at Astana IT University to increase social activity?</p>
+                        <label>
+                            <input type="radio" name="q3" value="A"> 10
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="B"> 20
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="C"> 30
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="D"> 40
+                        </label>
+                    </li>
+
+                    <li class="quiz-qu"><p style="font-weight: bold;">Where does HAYROLLAEV AYAN work and in what position?</p>
+                        <label>
+                            <input type="radio" name="q4" value="A"> Astana IT University, Professor
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="B"> Alseco, Java Developer
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="C"> AITU Alumni Association, President
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="D"> Government of Kazakhstan, ICT Minister
+                        </label>
+                    </li>
+
+                    <li class="quiz-qu"><p style="font-weight: bold;">Why did HAYROLLAEV AYAN choose Astana IT University?</p>
+                        <label>
+                            <input type="radio" name="q5" value="A"> Proximity to Home
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="B"> Recommended by Friends
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="C"> Suited to Study Program Wishes
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="D"> Affordable Tuition
+                        </label>
+                    </li>
+
+                    <li class="quiz-qu"><p style="font-weight: bold;">On a scale from 0 to 10, how does HAYROLLAEV AYAN rate the level of study at AITU?</p>
+                        <label>
+                            <input type="radio" name="q6" value="A"> 5
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="B"> 8
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="C"> 10
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="D"> 12
+                        </label>
+                    </li>
+
+                    <li class="quiz-qu"><p style="font-weight: bold;">On a scale from 0 to 70, how does HAYROLLAEV AYAN rate student life at AITU?</p>
+                        <label>
+                            <input type="radio" name="q7" value="A"> 30
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="B"> 50
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="C"> 70
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="D"> 90
+                        </label>
+                    </li>
+
+                    <li class="quiz-qu"><p style="font-weight: bold;">How has Astana IT University influenced the formation of HAYROLLAEV AYAN's personality?</p>
+                        <label>
+                            <input type="radio" name="q8" value="A"> Minimal Influence
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="B"> Negative Influence
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="C"> Significant Influence
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="D"> No Influence
+                        </label>
+                    </li>
+
+                    <li class="quiz-qu"><p style="font-weight: bold;">What profession is HAYROLLAEV AYAN in?</p>
+                        <label>
+                            <input type="radio" name="q9" value="A"> Mechanical Engineering
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="B"> Software Engineering
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="C"> Medicine
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="D"> Architecture
+                        </label>
+                    </li>
+
+                    <li class="quiz-qu"><p style="font-weight: bold;">What recommendation does HAYROLLAEV AYAN give to AITU students?</p>
+                        <label>
+                            <input type="radio" name="q10" value="A"> Focus on Grades
+                        </label>
+                        <label>
+                            <input type="radio" name="q10" value="B"> Join as Many Clubs as Possible
+                        </label>
+                        <label>
+                            <input type="radio" name="q10" value="C"> Prioritize Interests
+                        </label>
+                        <label>
+                            <input type="radio" name="q10" value="D"> Skip Extracurricular Activities
+                        </label>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<button class="open-button" onclick="openForm()">Chat</button>
+<div class="chat-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Chat with students!</h1>
+  
+      <textarea placeholder="Type message.." name="msg" required></textarea>
+  
+      <button type="submit " class="btn">Send</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+</div>
+</div>
+
+    <footer>
+        <p>&copy; 2023 University Merch. All rights reserved.</p>
+    </footer>
+
+    <script src="js/blog.js"></script>
+    <script src="js/blog_animation.js"></script>
+
+    <button id="scrollTopBtn" title="Go to top">&#8593;</button>
+    <script src="https://unpkg.com/gsap@3.9.1/dist/gsap.min.js"></script>
+
+
+</body>
+
+</html>
